@@ -38,13 +38,26 @@ public class MainActivity extends AppCompatActivity {
         * parameters to be passed are :
         * 1 : context = this,
         * 2 : layout = (can be custom or android inbuilt),
+        *      "android.R.layout.simple_list_item_1"  <- inbuilt layout
         * 3 : data source = array or sql
         *
         * */
 
+        /*
+         * parameters to be passed are : Custom layout
+         * 1 : context = this,
+         * 2 : layout = (can be custom or android inbuilt),
+         *      "R.layout.my_list_item"  <- custom layout
+         * 3 : view id
+         *      "R.id.textView"  <- TextView id
+         * 4 : data source = array or sql
+         *
+         * */
+
         ArrayAdapter adapter = new ArrayAdapter(
                 this,
-                android.R.layout.simple_list_item_1,
+                R.layout.my_list_item,
+                R.id.textView,
                 worldCup22
         );
 
